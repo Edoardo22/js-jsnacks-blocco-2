@@ -8,13 +8,15 @@ for (var i = 0; i < 7; i++) {
     x = nomi[i];
     nomi[i] = nomi[posizioneCasualeNomi];
     nomi[posizioneCasualeNomi] = x;
-    nomeCompleto.push(nomi[i])
+
+
     posizioneCasualeCognomi = Math.floor(Math.random() * 7);
     x = cognomi[i];
     cognomi[i] = cognomi[posizioneCasualeCognomi];
     cognomi[posizioneCasualeCognomi] = x;
-    nomeCompleto.push(cognomi[i])
 
+    const nuovoNomeCognome = nomi[i] + " " + cognomi[i];
+    nomeCompleto.push(nuovoNomeCognome)
 }
 
 console.log(nomeCompleto)
